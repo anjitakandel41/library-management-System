@@ -1,0 +1,46 @@
+[
+    {
+        "first_name": "anjita",
+        "last_name": "kandel",
+        "email": "anjitakandel51@gmail.com",
+        "password": "scrypt:32768:8:1$9eUxtM3FfucyNjF1$75aee9f35d61c3b6065ebd2135df9bf12cfd48c0fff75fa81a9924143d03129a81463e9db8f4d5cbf577267fbc7ced290c5eccfa49bd9afd1cbe46e412f1a044"
+    },
+    {
+        "first_name": "Anjita",
+        "last_name": "Kandel",
+        "email": "anjitakandel54@gmail.com",
+        "password": "scrypt:32768:8:1$bsqE04CnFRJjZkYb$f5f5286b6e5d2bd5fef6f45530bb69c875be7a32235fcea3ff37a0f36587528d296dd7d1c0198c672fb69a1be24452547b4768678a2bd1297692c38e7b5b9c91"
+    },
+    {
+        "first_name": "manisha",
+        "last_name": "kandel",
+        "email": "manisha56@gmail.com",
+        "password": "scrypt:32768:8:1$0mSqAJqGJVHvEQF0$6a26294a3387ea5a8138ceeccc03aeb7dfba4f32cf10c73b71b0bcd3063bd16b66f23f7d60d82bef91b2aa5252b4aff3ffab0947c636507974d233c4c5dcbc07",
+        "role": "librarian",
+        "active": true
+    },
+    {
+        "first_name": "Amrita",
+        "last_name": "Kandel",
+        "email": "Amrita45@gmail.com",
+        "password": "scrypt:32768:8:1$MomksJ6X0lOXtvpS$8ce454ca64d7b59a9c3fabc9e7f3438a789f2a62a40445325fb81fae37e370b6c0d1e103183073e7c845d47179d6fe333c8bfa03fd3df5eb3bc45c8f4862836f",
+        "role": "student",
+        "active": true
+    },
+    {
+        "first_name": "Auto",
+        "last_name": "Tester",
+        "email": "autotest@example.com",
+        "password": "scrypt:32768:8:1$43pUesRnTpzoyGbO$e5b44f0ea09f0d769405b69083a54f2e36f837d512774dbccd03c89c0c59234d223a68ed1a80d431a26fa366ca6a894ce6f378865d6b664a2ea5bfdb43e5b52f",
+        "role": "student",
+        "active": true
+    },
+    {
+        "first_name": "anuja",
+        "last_name": "tiwari",
+        "email": "anuja23@gmail.com",
+        "password": "scrypt:32768:8:1$S1dIyNEB7acWiYGb$d9b6952577026ff427af5b80ecac0e683fb93763f1286a6455c379743ddeeaae69b11685886ab49919feb6026299ca98f101e69881226b575781302e262f49e0",
+        "role": "librarian",
+        "active": true
+    }
+]

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <h1>Library Dashboard</h1>
+    <a href="{{ url_for('logout') }}" class="btn-logout">Logout</a>
+</header>
+
+<main>
+    <!-- ================= USERS ================= -->
+    <section>
+        <h2>Registered Users</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Active</th>
+            </tr>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.first_name }} {{ user.last_name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ "Yes" if user.active else "No" }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </section>
+
+    <!-- ================= BOOKS ================= -->
+    <section>
+        <h2>Books</h2>
+        <form method="post" action="{{ url_for('add_book') }}">
+            <input type="text" name="title" placeholder="Title" required>
+            <input type="text" name="author" placeholder="Author" required>
+            <input type="text" name="category" placeholder="Category" required>
+            <input type="number" name="quantity" placeholder="Quantity" required>
+            <button type="submit" class="btn">Add Book</button>
+        </form>
+
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>Quantity</th>
+                <th>Issued</th>
+            </tr>
+            {% for book in books %}
+            <tr>
+                <td>{{ book.title }}</td>
+                <td>{{ book.author }}</td>
+                <td>{{ book.category }}</td>
+                <td>{{ book.quantity }}</td>
+                <td>{{ book.issued }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </section>
+
+    <!-- ================= ISSUE BOOK ================= -->
+    <section>
+        <h2>Issue Book</h2>
+        <form method="post" action="{{ url_for('issue_book') }}">
+            <select name="user_email" required>
+                <option value="">Select User</option>
+                {% for user in users %}
+                <option value="{{ user.email }}">{{ user.first_name }} {{ user.last_name }}</option>
+                {% endfor %}
+            </select>
+
+            <select name="book_id" required>
+                <option value="">Select Book</option>
+                {% for book in books %}
+                <option value="{{ book.id }}">{{ book.title }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" class="btn">Issue Book</button>
+        </form>
+    </section>
+
+    <!-- ================= RETURN BOOK ================= -->
+    <section>
+        <h2>Return Books</h2>
+        <table>
+            <tr>
+                <th>User</th>
+                <th>Book</th>
+                <th>Issue Date</th>
+                <th>Return Date</th>
+                <th>Status</th>
+                <th>Fine</th>
+                <th>Action</th>
+            </tr>
+            {% for issue in issues %}
+            <tr>
+                <td>{{ issue.user_email }}</td>
+                <td>
+                    {% for book in books %}
+                        {% if book.id == issue.book_id %}
+                            {{ book.title }}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td>{{ issue.issue_date }}</td>
+                <td>{{ issue.return_date }}</td>
+                <td>{{ "Returned" if issue.returned else "Issued" }}</td>
+                <td>{{ issue.fine }}</td>
+                <td>
+                    {% if not issue.returned %}
+                    <a href="{{ url_for('return_book', issue_id=issue.id) }}" class="btn">Return</a>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </section>
+
+</main>
+
+</body>
+</html>

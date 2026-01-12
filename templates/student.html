@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>Student Dashboard</h1>
+    <a href="{{ url_for('logout') }}" class="btn-logout">Logout</a>
+</header>
+
+<main>
+    <section>
+        <h2>Available Books</h2>
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>Available</th>
+            </tr>
+
+            {% for book in books %}
+            {% if book.quantity - book.issued > 0 %}
+            <tr>
+                <td>{{ book.title }}</td>
+                <td>{{ book.author }}</td>
+                <td>{{ book.category }}</td>
+                <td>{{ book.quantity - book.issued }}</td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+        </table>
+    </section>
+</main>
+
+</body>
+</html>

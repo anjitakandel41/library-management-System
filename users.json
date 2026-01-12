@@ -1,0 +1,10 @@
+[
+    {
+        "first_name": "Amrit",
+        "last_name": "Tiwarii",
+        "email": "amrit23@gmail.com",
+        "password": "scrypt:32768:8:1$zpWx1SMqqVHCttOb$95f02ba4cce99e137687f2c625f5f2013bff331a3267608401139c72018ecd00a43840d5e0d0fff91320b56a6503647bd70162ac36213bb44c3156189a7fd3f7",
+        "role": "librarian",
+        "active": true
+    }
+]

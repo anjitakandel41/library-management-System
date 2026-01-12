@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "user_email": "anjitakandel51@gmail.com",
+        "book_id": 1,
+        "issue_date": "2025-12-30",
+        "return_date": "2026-01-06",
+        "returned": true,
+        "fine": 0
+    },
+    {
+        "id": 2,
+        "user_email": "anjitakandel51@gmail.com",
+        "book_id": 3,
+        "issue_date": "2025-12-30",
+        "return_date": "2026-01-06",
+        "returned": true,
+        "fine": 0
+    },
+    {
+        "id": 3,
+        "user_email": "manisha56@gmail.com",
+        "book_id": 2,
+        "issue_date": "2025-12-30",
+        "return_date": "2026-01-06",
+        "returned": false,
+        "fine": 0
+    }
+]

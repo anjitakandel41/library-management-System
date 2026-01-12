@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "calculus i",
+        "author": "pratap tiwari",
+        "category": "math ",
+        "quantity": 3,
+        "issued": 0
+    },
+    {
+        "id": 2,
+        "title": "c programming",
+        "author": "rima kc",
+        "category": "progranmming",
+        "quantity": 3,
+        "issued": 1
+    },
+    {
+        "id": 3,
+        "title": "math ",
+        "author": "pratap tiwari",
+        "category": "math i",
+        "quantity": 1,
+        "issued": 0
+    }
+]

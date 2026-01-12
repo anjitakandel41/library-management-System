@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Flask CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- ================= REGISTER ================= -->
+
+<div class="container" id="signup" style="display:none;">
+    <h1 class="form-title">Register</h1>
+
+    <form method="post" action="/register">
+
+        <!-- ROLE -->
+        <div class="input-group">
+            <i class="fas fa-user-tag"></i>
+            <select name="role" required>
+                <option value="">Select Role</option>
+                <option value="student">Student</option>
+                <option value="librarian">Librarian</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" name="fName" placeholder="First Name" required> <label>First Name</label>
+        </div>
+
+        <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" name="lName" placeholder="Last Name" required> <label>Last Name</label>
+        </div>
+
+        <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" name="email" placeholder="Email" required> <label> Email</label>
+        </div>
+
+        <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" name="password" placeholder="Password" required> <label>Password</label>
+        </div>
+
+        <button class="btn">Sign Up</button>
+    </form>
+
+    <p class="or">---------- or ----------</p>
+
+    <div class="icons">
+        <a href="https://www.google.com" target="_blank">
+  <i class="fab fa-google" style="font-size:50px; color:#4285F4;"></i>
+</a>
+ 
+        <a href="https://www.facebook.com/anjita.kandel " target="_blank">
+        <i class="fab fa-facebook"></i></a>
+    </div>
+
+    <div class="links">
+        <p>Already have an account?</p>
+        <button id="signInButton">Sign In</button>
+    </div>
+</div>
+
+<!-- ================= LOGIN ================= -->
+<div class="container" id="signIn">
+    <h1 class="form-title">Sign In</h1>
+
+    {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div class="alert error">
+      {{ messages[0] }}
+    </div>
+  {% endif %}
+{% endwith %}
+
+    <form method="post" action="/login">
+
+        <div class="input-group">
+        <i class="fas fa-user-tag"></i>
+        <select name="role" required>
+            <option value="">Select Role</option>
+            <option value="student">Student</option>
+            <option value="librarian">Librarian</option>
+        </select>
+    </div>
+
+
+        <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" name="email" placeholder="Email" required><label>Email</label>
+        </div>
+
+        <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" name="password" placeholder="Password" required><label>Password</label>
+        </div>
+
+        <p class="recover">
+            <a href="#">Recover Password</a>
+        </p>
+
+        <button class="btn">Sign In</button>
+    </form>
+
+    <p class="or">---------- or ----------</p>
+
+    <div class="icons">
+        <a href="https://www.google.com" target="_blank">
+  <i class="fab fa-google" style="font-size:30px; color:#4285F4;"></i>
+</a>
+
+        <a href=" https://www.facebook.com/anjita.kandel " target="_blank">
+        <i class="fab fa-facebook"></i>
+        </a>
+    </div>
+
+    <div class="links">
+        <p>Don't have an account?</p>
+        <button id="signUpButton">Sign Up</button>
+    </div>
+</div>
+
+<!-- Flask JS -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+=======

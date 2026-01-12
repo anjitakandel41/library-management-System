@@ -6,5 +6,29 @@
         "password": "scrypt:32768:8:1$zpWx1SMqqVHCttOb$95f02ba4cce99e137687f2c625f5f2013bff331a3267608401139c72018ecd00a43840d5e0d0fff91320b56a6503647bd70162ac36213bb44c3156189a7fd3f7",
         "role": "librarian",
         "active": true
+    },
+    {
+        "first_name": "ram",
+        "last_name": "shah",
+        "email": "ramshah23@gmail.com",
+        "password": "scrypt:32768:8:1$neaKZNHAVD8XDn3R$0d58e211514d2c1c9d3f42d7de7db269d40325c9453a95d12883523ba283f9216b4fe8c3e6156422fc13a728eb3816e60ecf7bc08ac9671470ca23de80043c0a",
+        "role": "student",
+        "active": true
+    },
+    {
+        "first_name": "ram",
+        "last_name": "bum",
+        "email": "rambum@gmail.com",
+        "password": "scrypt:32768:8:1$My9l3LUhTByGVhce$b62bde9ac8c9c232df87f4508dfa374528b57279cdef395eb758959ad50d0bb356cce0b7aa0393d58399e7735dbe2bc12816861b01a9acb3dd61db9844f4dc1a",
+        "role": "librarian",
+        "active": true
+    },
+    {
+        "first_name": "Auto",
+        "last_name": "Tester",
+        "email": "autotest@example.com",
+        "password": "scrypt:32768:8:1$m3srVZZDBdWzx9Tf$be05ada3a224889b9d998f301e182f3cb29be285e60c5463eb8822d009b653fd4a268871d5fd8fb12b592984facaf68487415c862d251c1916b9f39a30dd6ff8",
+        "role": "student",
+        "active": true
     }
 ]
